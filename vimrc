@@ -29,7 +29,7 @@ filetype plugin indent on
 "-------------------------------------------------------------------------------
 " Colors and appearance
 "-------------------------------------------------------------------------------
-"colorscheme default
+colorscheme default
 set number
 highlight LineNr term=bold cterm=NONE ctermfg=White  ctermbg=LightGray gui=NONE
                \ guifg=DarkGrey guibg=NONE
