@@ -114,6 +114,7 @@ set wildignore+=build,.git
 let g:ycm_filetype_whitelist = {'cpp': 1, 'c': 1, 'python':1}
 let g:ycm_global_ycm_extra_conf = '~/.vim/other_files/ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
+noremap <Leader>jd :YcmCompleter GoToDefinitionElseDeclaration<cr>
 
 "-------------------------------------------------------------------------------
 " Unite Configuration
@@ -139,7 +140,7 @@ nnoremap <Space>ll :Unite locationlist<cr>
 " Vim-airline Configuration
 "-------------------------------------------------------------------------------
 let g:airline#extensions#whitespace#checks = [ 'indent', 'trailing', 'long', 'mixed-indent-file' ]
-"let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#loclist#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme='papercolor'

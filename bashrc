@@ -139,3 +139,4 @@ shrink ()
 
 export PYTHONSTARTUP=~/.pythonrc
 export PATH=$PATH:~/.ctags/bin
+export PYTHONPATH=./python/:$PYTHONPATH
