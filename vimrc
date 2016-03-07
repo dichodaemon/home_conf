@@ -1,9 +1,9 @@
 set nocompatible
-filetype off
 
 "-------------------------------------------------------------------------------
 " Vundle
 "-------------------------------------------------------------------------------
+filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
@@ -32,7 +32,7 @@ filetype plugin indent on
 colorscheme default
 set number
 highlight LineNr term=bold cterm=NONE ctermfg=White  ctermbg=LightGray gui=NONE
-               \ guifg=DarkGrey guibg=NONE
+               \ guifg=White guibg=LightGray
 highlight OverLength ctermbg=gray ctermfg=black guibg=#EEEEEE
 match OverLength /\%101v.\+/
 set laststatus=2
