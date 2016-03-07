@@ -8,7 +8,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'https://github.com/wincent/command-t.git'
-Plugin 'https://github.com/sjbach/lusty.git'
 Plugin 'https://github.com/scrooloose/nerdcommenter.git'
 Plugin 'https://github.com/Shougo/vimproc.vim.git'
 Plugin 'https://github.com/Shougo/unite.vim.git'
@@ -114,6 +113,8 @@ set wildignore+=build,.git
 let g:ycm_filetype_whitelist = {'cpp': 1, 'c': 1, 'python':1}
 let g:ycm_global_ycm_extra_conf = '~/.vim/other_files/ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
+let g:ycm_always_populate_location_list = 1
+let g:syntastic_always_populate_loc_list = 1
 noremap <Leader>jd :YcmCompleter GoToDefinitionElseDeclaration<cr>
 
 "-------------------------------------------------------------------------------
@@ -128,9 +129,10 @@ let g:unite_source_grep_default_opts =
 \ '--ignore ''build'''
 let g:unite_source_grep_recursive_opt = ''
 nnoremap <space>r :UniteResume<cr>
-nnoremap <space>/ :Unite grep:.<cr>
+nnoremap <space>/ :Unite -no-split grep:.<cr>
 nnoremap <space>? :Unite -no-quit -keep-focus grep:.<cr>
 nnoremap <space>o :Unite outline<cr>
+nnoremap <leader>lj :Unite -quick-match -no-split buffer<cr>
 nnoremap <Space>gb :Unite giti/branch<cr>
 nnoremap <Space>gs :Unite -no-quit -keep-focus giti/status<cr>
 nnoremap <Space>qf :Unite qf<cr>
@@ -144,8 +146,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#loclist#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme='papercolor'
-let g:ycm_always_populate_loc_list = 1
-let g:syntastic_always_populate_loc_list = 1
+autocmd! BufEnter * :AirlineRefresh
 
 "-------------------------------------------------------------------------------
 " Configure vimrc auto reload
@@ -154,4 +155,3 @@ augroup reload_vimrc " {
   autocmd!
   autocmd BufWritePost $MYVIMRC source $MYVIMRC
 augroup END " }
-
