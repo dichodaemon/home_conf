@@ -23,17 +23,18 @@ Plugin 'https://github.com/tpope/vim-fugitive.git'
 Plugin 'https://github.com/tpope/vim-unimpaired.git'
 Plugin 'https://github.com/kmnk/vim-unite-giti.git'
 Plugin 'https://github.com/Valloric/YouCompleteMe.git'
+
+Plugin 'https://github.com/vim-scripts/summerfruit256.vim.git'
 call vundle#end()
 filetype plugin indent on
 
 "-------------------------------------------------------------------------------
 " Colors and appearance
 "-------------------------------------------------------------------------------
-colorscheme default
+syntax on
+colorscheme summerfruit256
 set number
-highlight LineNr term=bold cterm=NONE ctermfg=White  ctermbg=LightGray gui=NONE
-               \ guifg=White guibg=LightGray
-highlight OverLength ctermbg=gray ctermfg=black guibg=#EEEEEE
+highlight OverLength ctermbg=gray ctermfg=black guibg=gray guifg=black
 match OverLength /\%101v.\+/
 set laststatus=2
 
@@ -43,8 +44,9 @@ set laststatus=2
 set autoindent
 set tabstop=2
 set shiftwidth=2
-autocmd Filetype python setlocal ts=4 sts=4 sw=4
-set tw=100
+autocmd Filetype python setlocal ts=4 sts=4 sw=4 tw=80
+autocmd Filetype c setlocal ts=2 sts=2 sw=2 tw=100
+autocmd Filetype cpp setlocal ts=2 sts=2 sw=2 tw=100
 set expandtab
 set nowrap
 
