@@ -23,8 +23,6 @@ Plugin 'https://github.com/tpope/vim-fugitive.git'
 Plugin 'https://github.com/tpope/vim-unimpaired.git'
 Plugin 'https://github.com/kmnk/vim-unite-giti.git'
 Plugin 'https://github.com/Valloric/YouCompleteMe.git'
-
-Plugin 'https://github.com/vim-scripts/summerfruit256.vim.git'
 call vundle#end()
 filetype plugin indent on
 
@@ -32,8 +30,11 @@ filetype plugin indent on
 " Colors and appearance
 "-------------------------------------------------------------------------------
 syntax on
-colorscheme summerfruit256
+colorscheme default
 set number
+highlight LineNr term=bold cterm=NONE ctermfg=White  ctermbg=LightGray gui=NONE
+               \ guifg=White guibg=LightGray
+
 highlight OverLength ctermbg=gray ctermfg=black guibg=gray guifg=black
 match OverLength /\%101v.\+/
 set laststatus=2
