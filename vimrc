@@ -135,7 +135,7 @@ nnoremap <space>o :Unite outline<cr>
 nnoremap <leader>lj :Unite -quick-match -no-split buffer<cr>
 nnoremap <Space>gb :Unite giti/branch<cr>
 nnoremap <Space>gs :Unite -no-quit -keep-focus giti/status<cr>
-nnoremap <Space>gl :Unite -auto-preview -no-split giti/log<cr>
+nnoremap <Space>gl :Unite -no-split giti/log<cr>
 nnoremap <Space>qf :Unite qf<cr>
 nnoremap <Space>ll :Unite -auto-preview -no-split locationlist<cr>
 
