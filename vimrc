@@ -77,6 +77,7 @@ set wildmenu
 set wildmode=list:longest,full
 set ignorecase
 set smartcase
+set scrolloff=2
 
 "-------------------------------------------------------------------------------
 " For Latex
