@@ -36,8 +36,15 @@ highlight LineNr term=bold cterm=NONE ctermfg=White  ctermbg=LightGray gui=NONE
                \ guifg=White guibg=LightGray
 
 highlight OverLength ctermbg=gray ctermfg=black guibg=gray guifg=black
-match OverLength /\%101v.\+/
+augroup Longlines
+  autocmd!
+  autocmd! FileType * match OverLength /\%81v.\+/
+  autocmd! FileType c,cpp match OverLength /\%101v.\+/
+  autocmd! BufEnter * match OverLength /\%81v.\+/
+  autocmd! BufEnter *.c,*.cpp,*.h match OverLength /\%101v.\+/
+augroup END
 set laststatus=2
+
 
 "-------------------------------------------------------------------------------
 " Formatting
@@ -45,16 +52,18 @@ set laststatus=2
 set autoindent
 set tabstop=2
 set shiftwidth=2
-autocmd Filetype python setlocal ts=4 sts=4 sw=4 tw=80
-autocmd Filetype c setlocal ts=2 sts=2 sw=2 tw=100
-autocmd Filetype cpp setlocal ts=2 sts=2 sw=2 tw=100
 set expandtab
 set nowrap
+filetype plugin on
 
 "-------------------------------------------------------------------------------
 " Behavior
 "-------------------------------------------------------------------------------
-filetype plugin on
+
+" MacOS fixes
+set backspace=indent,eol,start
+fixdel
+
 set autoread
 set incsearch
 set hlsearch
