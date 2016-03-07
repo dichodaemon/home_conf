@@ -31,7 +31,7 @@ filetype plugin indent on
 syntax on
 colorscheme default
 set number
-highlight LineNr term=bold cterm=NONE ctermfg=White  ctermbg=LightGray gui=NONE
+highlight LineNr term=bold cterm=bold ctermfg=White  ctermbg=LightGray gui=bold
                \ guifg=White guibg=LightGray
 
 highlight OverLength ctermbg=gray ctermfg=black guibg=gray guifg=black
