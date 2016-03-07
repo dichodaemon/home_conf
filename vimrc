@@ -115,7 +115,8 @@ let g:ycm_global_ycm_extra_conf = '~/.vim/other_files/ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_always_populate_location_list = 1
 let g:syntastic_always_populate_loc_list = 1
-noremap <Leader>jd :YcmCompleter GoToDefinitionElseDeclaration<cr>
+noremap <Leader>jd :YcmCompleter GoToDefinition<cr>
+noremap <Leader>jc :YcmCompleter GoToDeclaration<cr>
 
 "-------------------------------------------------------------------------------
 " Unite Configuration
@@ -136,7 +137,7 @@ nnoremap <leader>lj :Unite -quick-match -no-split buffer<cr>
 nnoremap <Space>gb :Unite giti/branch<cr>
 nnoremap <Space>gs :Unite -no-quit -keep-focus giti/status<cr>
 nnoremap <Space>qf :Unite qf<cr>
-nnoremap <Space>ll :Unite locationlist<cr>
+nnoremap <Space>ll :Unite -auto-preview -no-split locationlist<cr>
 
 "-------------------------------------------------------------------------------
 " Vim-airline Configuration
