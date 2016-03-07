@@ -125,13 +125,12 @@ noremap <Leader>jc :YcmCompleter GoToDeclaration<cr>
 let g:unite_data_directory = '~/.vim/cache/unite'
 let g:unite_source_grep_command = 'ag'
 let g:unite_source_grep_default_opts =
-\ '-i --vimgrep --hidden --ignore ' .
+\ '-S -t --vimgrep --hidden --ignore ' .
 \ '''.hg'' --ignore ''.svn'' --ignore ''.git'' --ignore ''.bzr'' ' .
 \ '--ignore ''build'''
 let g:unite_source_grep_recursive_opt = ''
-nnoremap <space>r :UniteResume<cr>
-nnoremap <space>/ :Unite -no-split grep:.<cr>
-nnoremap <space>? :Unite -no-quit -keep-focus grep:.<cr>
+nnoremap <space><space> :UniteResume<cr>
+nnoremap <space>/ :Unite -auto-preview -no-split grep:.<cr>
 nnoremap <space>o :Unite outline<cr>
 nnoremap <leader>lj :Unite -quick-match -no-split buffer<cr>
 nnoremap <Space>gb :Unite giti/branch<cr>
@@ -155,4 +154,5 @@ autocmd! BufEnter * :AirlineRefresh
 augroup reload_vimrc " {
   autocmd!
   autocmd BufWritePost $MYVIMRC source $MYVIMRC
+  autocmd BufWritePost ~/home_conf/vimrc source $MYVIMRC
 augroup END " }
