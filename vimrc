@@ -115,8 +115,8 @@ let g:ycm_global_ycm_extra_conf = '~/.vim/other_files/ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_always_populate_location_list = 1
 let g:syntastic_always_populate_loc_list = 1
-noremap <Leader>jd :YcmCompleter GoToDefinition<cr>
-noremap <Leader>jc :YcmCompleter GoToDeclaration<cr>
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
 
 "-------------------------------------------------------------------------------
 " Unite Configuration
@@ -132,17 +132,20 @@ let g:unite_source_grep_recursive_opt = ''
 nnoremap <space><space> :UniteResume<cr>
 nnoremap <space>/ :Unite -auto-preview -no-split grep:.<cr>
 nnoremap <space>o :Unite outline<cr>
-nnoremap <leader>lj :Unite -quick-match -no-split buffer<cr>
 nnoremap <Space>gb :Unite giti/branch<cr>
 nnoremap <Space>gs :Unite -no-quit -keep-focus giti/status<cr>
 nnoremap <Space>gl :Unite -no-split giti/log<cr>
 nnoremap <Space>qf :Unite qf<cr>
 nnoremap <Space>ll :Unite -auto-preview -no-split locationlist<cr>
 
+call unite#custom#source('buffer', 'converters', 'converter_file_directory')
+nnoremap <leader>lj :Unite -quick-match -no-split buffer<cr>
+
 "-------------------------------------------------------------------------------
 " Vim-airline Configuration
 "-------------------------------------------------------------------------------
-let g:airline#extensions#whitespace#checks = [ 'indent', 'trailing', 'long', 'mixed-indent-file' ]
+let g:airline#extensions#whitespace#checks = [ 'indent', 'trailing', 'long', 
+                                            \  'mixed-indent-file' ]
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#loclist#enabled = 1
 let g:airline_powerline_fonts = 1
