@@ -70,7 +70,7 @@ let mapleader = ","
 set dir=~/.vim/swp
 " Display trailing spaces
 set list
-set listchars=tab:>-,trail:.,extends:#,nbsp:.
+set listchars=tab:>-,trail:~,extends:#,nbsp:~
 " Show options when pressing Tab in command window
 set wildmenu
 set wildmode=list:longest,full
