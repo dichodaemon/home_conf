@@ -117,6 +117,7 @@ let g:ycm_always_populate_location_list = 1
 let g:syntastic_always_populate_loc_list = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
+noremap <c-\><c-\> :YcmCompleter GoTo<cr>
 
 "-------------------------------------------------------------------------------
 " Unite Configuration
@@ -133,7 +134,7 @@ nnoremap <space><space> :UniteResume<cr>
 nnoremap <space>/ :Unite -auto-preview -no-split grep:.<cr>
 nnoremap <space>o :Unite outline<cr>
 nnoremap <Space>gb :Unite giti/branch<cr>
-nnoremap <Space>gs :Unite -no-quit -keep-focus giti/status<cr>
+nnoremap <Space>gs :Unite giti/status<cr>
 nnoremap <Space>gl :Unite -no-split giti/log<cr>
 nnoremap <Space>qf :Unite qf<cr>
 nnoremap <Space>ll :Unite -auto-preview -no-split locationlist<cr>
