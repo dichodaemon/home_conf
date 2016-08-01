@@ -17,7 +17,6 @@ Plugin 'https://github.com/vim-airline/vim-airline.git'
 Plugin 'https://github.com/asenac/vim-airline-loclist.git'
 Plugin 'https://github.com/vim-airline/vim-airline-themes.git'
 Plugin 'https://github.com/funorpain/vim-cpplint.git'
-Plugin 'https://github.com/justincampbell/vim-eighties.git'
 Plugin 'https://github.com/tpope/vim-fugitive.git'
 Plugin 'https://github.com/tpope/vim-unimpaired.git'
 Plugin 'https://github.com/kmnk/vim-unite-giti.git'
@@ -93,7 +92,7 @@ set hidden
 "-------------------------------------------------------------------------------
 let g:CommandTFileScanner="find"
 let g:CommandTWildIgnore="**/build/*"
-let g:CommandTMaxFiles=10000
+let g:CommandTMaxFiles=100000
 
 "-------------------------------------------------------------------------------
 " CTags Configuration
