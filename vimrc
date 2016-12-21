@@ -1,30 +1,31 @@
-set nocompatible
+  set nocompatible
 
-"-------------------------------------------------------------------------------
-" Vundle
-"-------------------------------------------------------------------------------
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'https://github.com/wincent/command-t.git'
-Plugin 'https://github.com/scrooloose/nerdcommenter.git'
-Plugin 'https://github.com/Shougo/vimproc.vim.git'
-Plugin 'https://github.com/Shougo/unite.vim.git'
-Plugin 'https://github.com/Shougo/unite-outline.git'
-Plugin 'https://github.com/sgur/unite-qf.git'
-Plugin 'https://github.com/vim-airline/vim-airline.git'
-Plugin 'https://github.com/asenac/vim-airline-loclist.git'
-Plugin 'https://github.com/vim-airline/vim-airline-themes.git'
-Plugin 'https://github.com/funorpain/vim-cpplint.git'
-Plugin 'https://github.com/tpope/vim-fugitive.git'
-Plugin 'https://github.com/tpope/vim-unimpaired.git'
-Plugin 'https://github.com/kmnk/vim-unite-giti.git'
-Plugin 'https://github.com/Valloric/YouCompleteMe.git'
-call vundle#end()
-filetype plugin indent on
+  "-------------------------------------------------------------------------------
+  " Vundle
+  "-------------------------------------------------------------------------------
+  filetype off
+  set rtp+=~/.vim/bundle/Vundle.vim
+  call vundle#begin()
+  Plugin 'VundleVim/Vundle.vim'
+  Plugin 'https://github.com/wincent/command-t.git'
+  Plugin 'https://github.com/scrooloose/nerdcommenter.git'
+  Plugin 'https://github.com/Shougo/vimproc.vim.git'
+  Plugin 'https://github.com/Shougo/unite.vim.git'
+  Plugin 'https://github.com/Shougo/unite-outline.git'
+  Plugin 'https://github.com/sgur/unite-qf.git'
+  Plugin 'https://github.com/vim-airline/vim-airline.git'
+  Plugin 'https://github.com/asenac/vim-airline-loclist.git'
+  Plugin 'https://github.com/vim-airline/vim-airline-themes.git'
+  Plugin 'https://github.com/funorpain/vim-cpplint.git'
+  Plugin 'https://github.com/tpope/vim-fugitive.git'
+  Plugin 'https://github.com/tpope/vim-unimpaired.git'
+  Plugin 'https://github.com/kmnk/vim-unite-giti.git'
+  Plugin 'https://github.com/Valloric/YouCompleteMe.git'
+  Plugin 'https://github.com/nvie/vim-flake8.git'
+  call vundle#end()
+  filetype plugin indent on
 
-"-------------------------------------------------------------------------------
+  "-------------------------------------------------------------------------------
 " Colors and appearance
 "-------------------------------------------------------------------------------
 syntax on
@@ -48,7 +49,8 @@ set laststatus=2
 " Formatting
 "-------------------------------------------------------------------------------
 set autoindent
-set tabstop=2
+set tabstop=8
+set softtabstop=2
 set shiftwidth=2
 set expandtab
 set nowrap
@@ -69,7 +71,7 @@ let mapleader = ","
 set dir=~/.vim/swp
 " Display trailing spaces
 set list
-set listchars=tab:>-,trail:~,extends:#,nbsp:~
+set listchars=tab:··,trail:~,extends:#,nbsp:~
 " Show options when pressing Tab in command window
 set wildmenu
 set wildmode=list:longest,full
@@ -116,7 +118,7 @@ let g:ycm_always_populate_location_list = 1
 let g:syntastic_always_populate_loc_list = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
-noremap <c-\><c-\> :YcmCompleter GoTo<cr>
+nnoremap <leader>gt :YcmCompleter GoTo<cr>
 
 "-------------------------------------------------------------------------------
 " Unite Configuration
