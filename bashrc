@@ -138,5 +138,5 @@ shrink ()
 }
 
 export PYTHONSTARTUP=~/.pythonrc
-export PATH=$PATH:~/.ctags/bin
+export PATH=$PATH:~/.ctags/bin:/snap/bin
 export PYTHONPATH=./python/:$PYTHONPATH

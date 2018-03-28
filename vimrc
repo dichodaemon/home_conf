@@ -22,6 +22,7 @@ Plugin 'https://github.com/tpope/vim-unimpaired.git'
 Plugin 'https://github.com/kmnk/vim-unite-giti.git'
 Plugin 'https://github.com/Valloric/YouCompleteMe.git'
 Plugin 'https://github.com/nvie/vim-flake8.git'
+Plugin 'udalov/kotlin-vim'
 call vundle#end()
 filetype plugin indent on
 
